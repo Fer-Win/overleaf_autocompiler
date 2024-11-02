@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Overleaf Auto-Recompile",
+  "version": "1.0",
+  "description": "Automatically recompiles Overleaf documents when changes are detected",
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "https://www.overleaf.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.overleaf.com/project/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128" : "icon128.png"
+  }
+}
